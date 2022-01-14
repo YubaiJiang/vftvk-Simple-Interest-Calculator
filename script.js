@@ -7,6 +7,7 @@ function compute()
     if (p <= 0)
     {
         alert("Priciple has to be positive.")
+        document.getElementById("principal").focus()
         return;
     }
 

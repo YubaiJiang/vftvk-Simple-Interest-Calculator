@@ -12,6 +12,7 @@ function compute()
     }
 
     let interests = p * r / 100 * y;
+    interests = interests.toFixed(2);
 
     let currentYear = parseInt(new Date().getFullYear());
     let targetYear = currentYear + parseInt(y);

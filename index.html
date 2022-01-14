@@ -2,15 +2,43 @@
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Web App - Simple Interest Calculator</title>
     </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <body onload="initialiseForm()">
+        <div>
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <table>
+                <tr>
+                    <th><label for = "principle">Amount</label></th>
+                    <th><input type="number"  id="principal" step="0.01" min="0" value="0"></th>
+                </tr>
+                <tr>
+                    <th><label for="rate">Interest Rate</label></th>
+                    <th>
+                        <input type="range"  id="rate"  min="0.0" max="50.0" step="0.1" value="3" oninput="refreshRate()">
+                        <output id="rateText"></output>
+                    </th>
+                </tr>
 
-        <button onclick="compute()">Compute</button>
+                <tr>
+                    <th><label for="years">No. of Years</label></th>
+                    <th><select type="number" id="years" value="1"></select></th>
+                </tr>
+            
+
+                <tr>
+                    <th><button onclick="compute()">Compute Interest</button></th>
+                </tr>
+            
+            </table>
+            <output id="results"></output>
+
+            <br><br>
+
+            <text>
+                &copy Everyone Can Get Rich
+            </text>
+        </div>
     </body>
 </html>

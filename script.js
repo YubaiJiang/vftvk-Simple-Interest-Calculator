@@ -4,6 +4,12 @@ function compute()
     let r = document.getElementById("rate").value;
     let y = document.getElementById("years").value;
 
+    if (p <= 0)
+    {
+        alert("Priciple has to be positive.")
+        return;
+    }
+
     let interests = p * r / 100 * y;
 
     let currentYear = parseInt(new Date().getFullYear());

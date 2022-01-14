@@ -11,10 +11,27 @@ function compute()
 
     let output = document.getElementById("results");
 
-    output.value = "If you deposit " + p + ",\n";
-    output.value = output.value + "at an interest rate of " + r + ".\n";
-    output.value = output.value + "You will receive and amount of " + interests + ",\n";
-    output.value = output.value + "in the year " + targetYear;
+    while(output.firstChild)
+    {
+        output.removeChild(output.lastChild)
+    }
+
+    let line1 = "If you deposit " + "<mark>" + p + "</mark>,";
+    let line2 = "at an interest rate of " + "<mark>" + r + "</mark>" + ".";
+    let line3 = "You will receive and amount of "  + "<mark>" + interests + "</mark>" + ",";
+    let line4 = "in the year " + "<mark>" + targetYear + "</mark>";
+    let lines = [line1, line2, line3, line4];
+
+    for (let i = 0; i < 4; i++)
+    {
+        let p = document.createElement("output");
+        p.innerHTML = lines[i];
+        output.appendChild(p);
+        if (i != 3)
+        {
+            output.appendChild(document.createElement("br"));
+        }
+    }
 
     
 }

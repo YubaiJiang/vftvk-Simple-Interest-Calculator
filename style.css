@@ -1,8 +1,24 @@
 body
 {
-    background-color:white;
+    background-color:black;
+    font-family: 'Times New Roman', Times, serif;
 }
-h1 {color:green;}
+
+section
+{
+    background-color: white;
+    padding: 20;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+h1 
+{
+    color:grey;
+    font-size: xx-large;
+    margin: 0;
+}
 
 label
 {
@@ -19,7 +35,7 @@ table
     text-align: left;
 }
 
-form
+div
 {
    padding-left: 20;
 }
